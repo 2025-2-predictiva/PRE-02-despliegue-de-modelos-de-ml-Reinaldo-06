@@ -11,7 +11,7 @@ def make_request():
     url = "http://127.0.0.1:5000"
 
     data = {
-        "bathrooms": "2",
+        "bathrooms": "3",
         "bedrooms": "3",
         "sqft_living": "1800",
         "sqft_lot": "2200",
@@ -20,10 +20,12 @@ def make_request():
         "condition": "3",
     }
 
-    response = requests.post(url, json=data, timeout=10)
+    response = requests.post(url, json=data, timeout=5)
 
     print(response.text)
 
 
 if __name__ == "__main__":
     make_request()
+    
+    
